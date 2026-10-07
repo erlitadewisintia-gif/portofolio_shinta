@@ -1,0 +1,93 @@
+:root {
+  --motion-soft: cubic-bezier(.2, .7, .2, 1);
+}
+
+html.js-enabled .reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .7s var(--motion-soft), transform .7s var(--motion-soft);
+}
+
+html.js-enabled .reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html.js-enabled .skill-item.reveal-on-scroll {
+  transition-duration: 1.2s;
+}
+
+html.js-enabled .profile-card.reveal-on-scroll {
+  transition-duration: 1.2s;
+}
+
+html.js-enabled .achievement-card.reveal-on-scroll {
+  transition-duration: 1.2s;
+}
+
+.hero-portrait img {
+  animation: portrait-float 7s ease-in-out infinite;
+}
+
+.hero-portrait:hover {
+  transform: translateY(-5px) rotate(1deg);
+  box-shadow: 0 24px 52px rgba(99, 87, 112, .17);
+  transition: transform .35s var(--motion-soft), box-shadow .35s var(--motion-soft);
+}
+
+.profile-card {
+  transition: transform .35s var(--motion-soft), box-shadow .35s var(--motion-soft);
+}
+
+.profile-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 42px rgba(99, 87, 112, .12);
+}
+
+.achievement-card {
+  transition: transform .35s var(--motion-soft), box-shadow .35s var(--motion-soft);
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(99, 87, 112, .1);
+}
+
+.contact-links a:hover .contact-icon,
+.contact-links a:focus-visible .contact-icon {
+  transform: rotate(-5deg) scale(1.06);
+}
+
+.contact-icon {
+  transition: transform .25s var(--motion-soft);
+}
+
+:where(a, button):focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 4px;
+}
+
+@keyframes portrait-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-enabled .reveal-on-scroll,
+  html.js-enabled .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-portrait img {
+    animation: none;
+  }
+
+  .hero-portrait:hover,
+  .profile-card:hover,
+  .achievement-card:hover,
+  .skill-item:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,1014 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4e4eb">
+  <meta name="description" content="Portofolio Dewi Shinta Damayanti, siswi XI RPL 1 SMKN 8 JEMBER.">
+  <title>Dewi Shinta Damayanti — Portofolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #343943;
+      --paper: #f8f2eb;
+      --panel: rgba(255, 255, 255, .42);
+      --accent: #c47799;
+      --cyan: #739ab9;
+      --muted: #707680;
+      --line: rgba(92, 103, 119, .2);
+      --body: "DM Sans", "Segoe UI", sans-serif;
+      --mono: "DM Sans", "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #f7dce7 0%, #e3eaf8 48%, #fff1d9 100%) fixed;
+      color: var(--ink);
+      font-family: var(--body);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      position: fixed;
+      z-index: 4;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px clamp(24px, 7vw, 100px);
+      color: var(--ink);
+      border-bottom: 1px solid rgba(92, 103, 119, .12);
+      background: rgba(248, 242, 235, .72);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border: 1px solid var(--accent);
+      border-radius: 50%;
+      color: var(--accent);
+      font: 500 11px var(--mono);
+    }
+
+    .nav {
+      display: flex;
+      gap: clamp(18px, 3vw, 38px);
+      align-items: center;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font: 11px var(--mono);
+      color: var(--muted);
+      transition: color .2s;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      color: var(--accent);
+    }
+
+    .menu-button {
+      display: none;
+      border: 1px solid var(--line);
+      color: var(--accent);
+      background: transparent;
+      padding: 9px 12px;
+      font: 11px var(--mono);
+    }
+
+    .hero {
+      position: relative;
+      z-index: 2;
+      min-height: 760px;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      padding: 112px 24px 72px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .16);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(240px, .8fr);
+      align-items: center;
+      gap: clamp(36px, 8vw, 110px);
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      animation: rise .7s ease-out both;
+    }
+
+    .hero-copy {
+      min-width: 0;
+    }
+
+    .eyebrow,
+    .section-label {
+      color: var(--cyan);
+      font: 11px var(--mono);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "// ";
+      color: var(--accent);
+    }
+
+    h1 {
+      max-width: 740px;
+      margin: 22px 0;
+      font: 500 clamp(54px, 7vw, 92px)/.98 "Fraunces", Georgia, serif;
+      letter-spacing: 0;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px 18px;
+      color: var(--muted);
+      font: 12px var(--mono);
+    }
+
+    .hero-meta span+span::before {
+      content: "/";
+      color: var(--cyan);
+      padding-right: 18px;
+    }
+
+    .scroll-cue {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 36px;
+      color: var(--ink);
+      text-decoration: none;
+      font: 11px var(--mono);
+    }
+
+    .scroll-cue span {
+      color: var(--accent);
+      transition: transform .2s;
+    }
+
+    .scroll-cue:hover span {
+      transform: translateY(3px);
+    }
+
+    .hero-portrait {
+      position: relative;
+      justify-self: end;
+      width: min(100%, 350px);
+      margin: 0;
+      padding: 10px;
+      border: 1px solid rgba(196, 119, 153, .62);
+      border-radius: 48% 48% 12px 12px;
+      background: rgba(255, 255, 255, .48);
+      box-shadow: 0 18px 48px rgba(99, 87, 112, .12);
+    }
+
+    .hero-portrait::before,
+    .hero-portrait::after {
+      position: absolute;
+      z-index: 1;
+      width: 18px;
+      height: 18px;
+      content: "";
+      border-color: var(--accent);
+      border-style: solid;
+    }
+
+    .hero-portrait::before {
+      top: -5px;
+      left: -5px;
+      border-width: 1px 0 0 1px;
+      border-radius: 12px 0 0;
+    }
+
+    .hero-portrait::after {
+      right: -5px;
+      bottom: -5px;
+      border-width: 0 1px 1px 0;
+      border-radius: 0 0 12px;
+    }
+
+    .hero-portrait img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 46% 46% 8px 8px;
+      filter: saturate(.78) contrast(1.02);
+    }
+
+    .hero-portrait figcaption {
+      padding: 10px 2px 1px;
+      color: var(--accent);
+      font: 9px var(--mono);
+      letter-spacing: .08em;
+    }
+
+    .section {
+      position: relative;
+      z-index: 2;
+      padding: clamp(72px, 9vw, 120px) clamp(24px, 8vw, 120px);
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: clamp(38px, 9vw, 130px);
+      align-items: start;
+    }
+
+    .profile-head h2 {
+      margin: 0;
+      font-size: clamp(34px, 4.5vw, 56px);
+      font-weight: 500;
+      line-height: 1.12;
+    }
+
+    .profile-card {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      width: min(920px, 100%);
+      margin: 30px auto 0;
+      padding: clamp(18px, 3vw, 30px);
+      border: 1px solid rgba(92, 103, 119, .16);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, .62);
+      box-shadow: 0 12px 34px rgba(99, 87, 112, .08);
+    }
+
+    .profile-facts {
+      display: contents;
+    }
+
+    .profile-fact {
+      min-width: 0;
+      padding: 16px 18px;
+      border: 1px solid rgba(92, 103, 119, .12);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, .5);
+    }
+
+    .profile-fact:last-child {
+      grid-column: 1 / -1;
+    }
+
+    .profile-fact dt {
+      color: var(--muted);
+      font: 10px var(--mono);
+      text-transform: uppercase;
+    }
+
+    .profile-fact dd {
+      margin: 5px 0 0;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .section-label {
+      margin: 5px 0 18px;
+    }
+
+    .about h2,
+    .contact h2,
+    .achievements h2 {
+      margin: 0;
+      font-size: clamp(34px, 4.5vw, 56px);
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .about-copy p {
+      max-width: 670px;
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    .about-copy strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .skills {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, .26);
+    }
+
+    .skills-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+
+    .skills h2 {
+      max-width: 640px;
+      margin: 0;
+      font-size: clamp(34px, 4.5vw, 56px);
+      font-weight: 500;
+      line-height: 1.12;
+    }
+
+    .skills-note {
+      max-width: 320px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .skill-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .skill-item {
+      min-height: 150px;
+      padding: 22px 24px;
+      border: 1px solid rgba(92, 103, 119, .16);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, .56);
+      box-shadow: 0 8px 24px rgba(99, 87, 112, .055);
+      transition: transform .45s ease, box-shadow .45s ease, border-color .45s ease;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-3px);
+      border-color: rgba(196, 119, 153, .4);
+      box-shadow: 0 14px 30px rgba(99, 87, 112, .1);
+    }
+
+    .skill-item h3 {
+      margin: 0 0 12px;
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .skill-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .achievements {
+      background: rgba(255, 255, 255, .2);
+    }
+
+    .achievement-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 32px;
+    }
+
+    .achievement-card {
+      min-width: 0;
+      overflow: hidden;
+      margin: 0;
+      border: 1px solid rgba(92, 103, 119, .16);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .56);
+      box-shadow: 0 8px 24px rgba(99, 87, 112, .055);
+    }
+
+    .achievement-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .achievement-card figcaption {
+      padding: 18px 20px 20px;
+    }
+
+    .achievement-tag {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font: 10px var(--mono);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .achievement-card h3 {
+      margin: 0 0 7px;
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .achievement-card figcaption>p:last-child {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .contact {
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid var(--line);
+      background: rgba(255, 255, 255, .18);
+    }
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+      gap: 20px clamp(32px, 7vw, 96px);
+      max-width: 1040px;
+    }
+
+    .contact-inner .section-label {
+      grid-column: 1 / -1;
+      margin-bottom: 0;
+    }
+
+    .contact h2 {
+      max-width: 760px;
+      grid-column: 1;
+      grid-row: 2 / span 2;
+    }
+
+    .contact h2 span {
+      color: var(--accent);
+    }
+
+    .contact-detail {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font: 12px var(--mono);
+    }
+
+    .contact-links {
+      display: grid;
+      grid-column: 2;
+      grid-row: 3;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .contact-links a {
+      display: inline-flex;
+      min-width: 0;
+      align-items: center;
+      gap: 13px;
+      padding: 12px 15px;
+      border: 1px solid rgba(92, 103, 119, .18);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .48);
+      color: var(--ink);
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .contact-links a:hover,
+    .contact-links a:focus-visible {
+      transform: translateY(-3px);
+      border-color: rgba(196, 119, 153, .48);
+      box-shadow: 0 10px 24px rgba(99, 87, 112, .1);
+    }
+
+    .contact-icon {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      flex: 0 0 42px;
+      place-items: center;
+      border-radius: 10px;
+      background: #f5e3eb;
+      color: #a6587e;
+    }
+
+    .contact-links a:last-child .contact-icon {
+      background: #e5edf7;
+      color: #587fa6;
+    }
+
+    .contact-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.7;
+    }
+
+    .contact-copy {
+      display: grid;
+      gap: 3px;
+    }
+
+    .contact-copy strong {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .contact-copy small {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .contact-arrow {
+      margin-left: auto;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    footer {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px clamp(24px, 8vw, 120px);
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font: 10px var(--mono);
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .flower-layer {
+      position: fixed;
+      z-index: 1;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .flower {
+      position: absolute;
+      top: -32px;
+      left: var(--left);
+      width: var(--size);
+      height: var(--size);
+      opacity: .64;
+      background: radial-gradient(ellipse at 50% 17%, var(--petal) 0 17%, transparent 19%), radial-gradient(ellipse at 79% 39%, var(--petal) 0 17%, transparent 19%), radial-gradient(ellipse at 68% 74%, var(--petal) 0 17%, transparent 19%), radial-gradient(ellipse at 32% 74%, var(--petal) 0 17%, transparent 19%), radial-gradient(ellipse at 21% 39%, var(--petal) 0 17%, transparent 19%), radial-gradient(circle at 50% 50%, var(--center) 0 9%, transparent 11%);
+      animation: flower-fall var(--duration) linear var(--delay) infinite;
+    }
+
+    .flower:nth-child(3n + 1) {
+      --petal: #e8a9c2;
+      --center: #fff1bd;
+    }
+
+    .flower:nth-child(3n + 2) {
+      --petal: #a9c9e4;
+      --center: #fff0bf;
+    }
+
+    .flower:nth-child(3n) {
+      --petal: #e8c99e;
+      --center: #fff8e7;
+    }
+
+    .flower:nth-child(1) {
+      --left: 6%;
+      --size: 19px;
+      --duration: 18s;
+      --delay: -7s;
+      --drift: 45px;
+    }
+
+    .flower:nth-child(2) {
+      --left: 17%;
+      --size: 14px;
+      --duration: 23s;
+      --delay: -15s;
+      --drift: -35px;
+    }
+
+    .flower:nth-child(3) {
+      --left: 29%;
+      --size: 22px;
+      --duration: 20s;
+      --delay: -3s;
+      --drift: 30px;
+    }
+
+    .flower:nth-child(4) {
+      --left: 41%;
+      --size: 16px;
+      --duration: 25s;
+      --delay: -19s;
+      --drift: -48px;
+    }
+
+    .flower:nth-child(5) {
+      --left: 53%;
+      --size: 20px;
+      --duration: 19s;
+      --delay: -11s;
+      --drift: 38px;
+    }
+
+    .flower:nth-child(6) {
+      --left: 64%;
+      --size: 13px;
+      --duration: 22s;
+      --delay: -5s;
+      --drift: -28px;
+    }
+
+    .flower:nth-child(7) {
+      --left: 76%;
+      --size: 18px;
+      --duration: 24s;
+      --delay: -17s;
+      --drift: 50px;
+    }
+
+    .flower:nth-child(8) {
+      --left: 88%;
+      --size: 15px;
+      --duration: 21s;
+      --delay: -9s;
+      --drift: -42px;
+    }
+
+    .flower:nth-child(9) {
+      --left: 96%;
+      --size: 21px;
+      --duration: 26s;
+      --delay: -13s;
+      --drift: 32px;
+    }
+
+    @keyframes flower-fall {
+      to {
+        transform: translate3d(var(--drift), 110vh, 0) rotate(300deg);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+
+      .flower-layer {
+        display: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .topbar {
+        padding: 18px 22px;
+      }
+
+      .brand {
+        font-size: 10px;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .nav {
+        display: none;
+        position: absolute;
+        top: 62px;
+        right: 22px;
+        min-width: 180px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        background: var(--panel);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 17px;
+      }
+
+      .nav.open {
+        display: flex;
+      }
+
+      .hero {
+        min-height: 0;
+        padding: 112px 23px 60px;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .hero-portrait {
+        justify-self: start;
+        width: min(78%, 300px);
+      }
+
+      h1 {
+        font-size: clamp(48px, 13vw, 76px);
+      }
+
+      .hero-meta {
+        gap: 8px 12px;
+        font-size: 10px;
+      }
+
+      .hero-meta span+span::before {
+        padding-right: 12px;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .profile-card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .skills-head {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 26px;
+      }
+
+      .skill-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .achievement-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-inner {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .contact-inner .section-label,
+      .contact h2,
+      .contact-links {
+        grid-column: 1;
+        grid-row: auto;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .skill-list {
+        grid-template-columns: 1fr;
+      }
+
+      .achievement-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-links {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="#beranda" aria-label="Dewi Shinta Damayanti, beranda"><span
+        class="brand-mark">DS</span><span>DEWI SHINTA DAMAYANTI</span></a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">MENU</button>
+    <nav class="nav" id="site-nav" aria-label="Navigasi utama">
+      <a href="#beranda">Beranda</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#profil">Profil</a>
+      <a href="#keahlian">Skill</a>
+      <a href="#prestasi">Prestasi</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <div class="flower-layer" aria-hidden="true">
+    <span class="flower"></span><span class="flower"></span><span class="flower"></span>
+    <span class="flower"></span><span class="flower"></span><span class="flower"></span>
+    <span class="flower"></span><span class="flower"></span><span class="flower"></span>
+  </div>
+
+  <main>
+    <section class="hero" id="beranda" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <div class="hero-copy">
+          <div class="eyebrow">Portofolio pelajar</div>
+          <h1 id="hero-title">Dewi Shinta<br><span>Damayanti.</span></h1>
+          <div class="hero-meta"><span>Siswi kelas XI RPL 1</span><span>SMKN 8 JEMBER</span></div>
+          <a class="scroll-cue" href="#tentang"><span aria-hidden="true">↓</span> Kenali saya</a>
+        </div>
+        <figure class="hero-portrait">
+          <img src="foto-shinta.jpg" alt="Foto Shinta" fetchpriority="high">
+          <figcaption></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section about" id="tentang">
+      <div>
+        <p class="section-label">01 / Tentang saya</p>
+        <h3>Senang belajar hal baru.</h3>
+      </div>
+      <div class="about-copy">
+        <p>Halo, saya <strong>Dewi Shinta Damayanti</strong>, siswi kelas XI RPL 1 di SMKN 8 JEMBER. Saya sedang
+          mengenal dunia rekayasa perangkat lunak dan mengembangkan kemampuan lewat proses belajar, mencoba, lalu
+          memperbaiki.</p>
+        <p>Bagi saya, setiap baris kode adalah kesempatan untuk membuat sesuatu yang berguna. Ini adalah ruang kecil
+          untuk merangkum perjalanan dan karya saya.</p>
+      </div>
+    </section>
+
+    <section class="section profile-section" id="profil" aria-labelledby="profile-title">
+      <div class="profile-head">
+        <p class="section-label">02 / Profil</p>
+        <h3 id="profile-title">Tentang diri saya.</h3>
+      </div>
+      <dl class="profile-card">
+        <div class="profile-fact">
+          <dt>Nama</dt>
+          <dd>Dewi Shinta Damayanti</dd>
+        </div>
+        <div class="profile-fact">
+          <dt>Kelas</dt>
+          <dd>XI RPL 1</dd>
+        </div>
+        <div class="profile-fact">
+          <dt>Sekolah</dt>
+          <dd>SMKN 8 JEMBER</dd>
+        </div>
+        <div class="profile-fact">
+          <dt>Bidang</dt>
+          <dd>Rekayasa Perangkat Lunak</dd>
+        </div>
+        <div class="profile-fact">
+          <dt>Minat</dt>
+          <dd>Web Development & UI/UX Design</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="section skills" id="keahlian" aria-labelledby="skills-title">
+      <div class="skills-head">
+        <div>
+          <p class="section-label">03 / Keahlian</p>
+          <h3 id="skills-title">Yang sedang saya pelajari.</h3>
+        </div>
+        <p class="skills-note">Kemampuan dasar yang terus saya latih lewat tugas dan proyek kecil.</p>
+      </div>
+      <div class="skill-list">
+        <article class="skill-item">
+          <h3>Web Development</h3>
+          <p>HTML, CSS, PHP, JavaScript</p>
+        </article>
+        <article class="skill-item">
+          <h3>Database</h3>
+          <p>MySQL</p>
+        </article>
+        <article class="skill-item">
+          <h3>Framework</h3>
+          <p>Laravel</p>
+        </article>
+        <article class="skill-item">
+          <h3>UI/UX Design</h3>
+          <p>Figma</p>
+        </article>
+        <article class="skill-item">
+          <h3>Tools</h3>
+          <p>VS Code, Laragon</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section achievements" id="prestasi">
+      <p class="section-label">04 / Prestasi - Sertifikat</p>
+      <h3>Bukti dari proses belajar.</h3>
+      <div class="achievement-grid">
+        <figure class="achievement-card">
+          <img src="sertifikat-java.png" alt="Foto ilustrasi sertifikat, ganti dengan foto sertifikat asli">
+          <figcaption>
+            <p class="achievement-tag">Sertifikat Java</p>
+            <h3>Java Fundamental Programming</h3>
+            <p>Sertifikat kelulusan kelas Java Fundamental Programming.</p>
+          </figcaption>
+        </figure>
+        <figure class="achievement-card">
+          <img src="sertifikat-bootstrap.png" alt="Foto ilustrasi kegiatan pendidikan, ganti dengan dokumentasi asli">
+          <figcaption>
+            <p class="achievement-tag">Sertifikat Web</p>
+            <h3>Pemrograman Front End Web dengan Bootstrap</h3>
+            <p>Sertifikat kelulusan kelas Pemrograman Front End Web dengan Bootstrap.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section contact" id="kontak">
+      <div class="contact-inner">
+        <p class="section-label">05 / Sampai jumpa</p>
+        <h2>Terus belajar,<br>terus <span>berkarya.</span></h2>
+        <h3>Terima kasih sudah berkunjung ke portofolio saya.</h3>
+        <p class="contact-detail">Dewi Shinta Damayanti · XI RPL 1 · SMKN 8 JEMBER</p>
+        <div class="contact-links" aria-label="Kontak Dewi">
+          <a href="https://wa.me/628228883611" target="_blank" rel="noopener noreferrer"
+            aria-label="Hubungi Dewi melalui WhatsApp di 08228883611">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z" />
+                <path
+                  d="M9 8.5c.3 2.5 2 4.2 4.5 4.5l1-1.2 2 1c-.3 1.5-1.2 2-2.5 2-3.8-.5-6.5-3.2-7-7 0-1.3.5-2.2 2-2.5l1 2L9 8.5Z" />
+              </svg>
+            </span>
+            <span class="contact-copy"><strong>WhatsApp</strong><small>08228883611</small></span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.instagram.com/dshintatiaa_/" target="_blank" rel="noopener noreferrer"
+            aria-label="Kunjungi Instagram @dshintatiaa_">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.7" cy="6.6" r=".8" fill="currentColor" stroke="none" />
+              </svg>
+            </span>
+            <span class="contact-copy"><strong>Instagram</strong><small>@dshintatiaa_</small></span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© <span id="year"></span> Dewi Shinta Damayanti</span><span>Dibuat dengan semangat belajar dan
+      berkarya.</span></footer>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
